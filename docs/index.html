@@ -1,7 +1,67 @@
+<!--
+manual run: python3 -m http.server 8000 --bind 0.0.0.0 --directory docs
+-->
 <!DOCTYPE html>
 <html lang="en">
-    <?php
-        echo "Hello, world";
-    ?>
 
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <style>
+        html {
+            background: #262322;
+            padding: 2vw;
+            font-family: "Michroma", sans-serif;
+        }
+
+        body {
+            margin-left: 2vw;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        button {
+            cursor: pointer;
+            color: white;
+            background: #1D2630;
+            border: solid, black;
+            font: "Michroma", sans-serif;
+        }
+
+        #coding[type="text"], #output {
+            width: 75vw;
+            height: 20vw;
+            color: white;
+            background: gray;
+            margin-left: 2vw;
+            margin-right: 20vw;
+            font: "Michroma", sans-serif;
+            border: solid, darkgray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>UAG-IDE</h3>
+    <nav>
+        <button id="file">File Manager</button>
+        <button id="edit">Edit Menu</button>
+        <button id="execute">Run Code</button>
+        <button type="button" class="side" id="explorer">File Explorer</button>
+        <button type="button" class="side" id="gitsource">GitHub Source</button>
+    </nav>
+    <input id="coding" type="text" placeholder="Type here..."></input>
+    <p id="output">The result will show up here.</p>
+
+</body>
+<script text="text/script.js">
+    const p = document.getElementById("output");
+    const run = document.getElementById("execute");
+
+</script>
 </html>
